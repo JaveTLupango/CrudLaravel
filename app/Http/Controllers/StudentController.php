@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Student;
 use Illuminate\Http\Request;
+use Symfony\Component\HttpKernel\Event\RequestEvent;
 
 class StudentController extends Controller
 {
@@ -15,6 +16,9 @@ class StudentController extends Controller
     public function index()
     {
         //
+        $students = Student::latest()->paginate(5);
+        return view('students.index', compact('students'))
+        ->with('i', (request()->input('page', 1)- 1) * 5);
     }
 
     /**
