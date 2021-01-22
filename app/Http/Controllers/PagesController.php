@@ -9,6 +9,10 @@ class PagesController extends Controller
 {
     //
     public function contactus(){
-        return "This is contact us page!";
+        return view('contactus');
+    }
+    public function aboutus($value='')
+    {
+    	return view('aboutus');
     }
 }

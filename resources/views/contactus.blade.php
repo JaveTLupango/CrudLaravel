@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Contact US</title>
-</head>
-<body>
-
-</body>
-</html>
+@extends('layouts.app')
+@section('title')
+Contact US
+@endsection

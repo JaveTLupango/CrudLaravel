@@ -22,4 +22,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('contactus', 'PagesController@contactus');
 
+Route::get('aboutus', 'PagesController@aboutus');
+
 
