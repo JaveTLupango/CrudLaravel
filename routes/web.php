@@ -14,14 +14,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
 Route::resource('student', 'App\Http\Controller\StudentController');
-
-
 Route::get('/home', 'HomeController@index')->name('home');
-
 Route::get('contactus', 'PagesController@contactus');
-
 Route::get('aboutus', 'PagesController@aboutus');
-
 
